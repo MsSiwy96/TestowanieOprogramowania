@@ -1,0 +1,13 @@
+mamy dane: email,haslo,jakies id
+
+tak jakby wstawiamy te dane w formularz i wysy³amy na stronê
+
+test prêdkoœci przetwarzania danych kont i odes³ania informacji
+
+potrzebny plik CSV z danymi
+
+ZADANIE DO DOMU:
+
+1. Napisz testplan z oczekiwanym wynikiem sukcesu i pora¿ki (sprawdzam stronê t¹ i t¹,mój noaction by³ taki, loguje sie na strone za pomoca takich parametrow,szukam w planie przedmiotu Testowanie oprogramowania, sukces jak sie uda a porazka jak nie)
+2. Test dowolnej strony na któr¹ mo¿na siê zalogowaæ (mo¿ebyæ coklolwiek, np. USOS
+3. Dane do logowanie brane z CSV
