@@ -15,7 +15,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">5</stringProp>
+          <stringProp name="LoopController.loops">6</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
@@ -29,13 +29,13 @@
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Konfiguracja plików CSV" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">Z:\apache-jmeter-3.3\Testy\hasla.csv</stringProp>
+          <stringProp name="filename">C:\Users\user\Desktop\Studia\apache-jmeter-3.3\testy\hasla.csv</stringProp>
           <boolProp name="ignoreFirstLine">false</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
           <stringProp name="shareMode">shareMode.all</stringProp>
           <boolProp name="stopThread">false</boolProp>
-          <stringProp name="variableNames">login,haslo,klucz</stringProp>
+          <stringProp name="variableNames">login,haslo</stringProp>
         </CSVDataSet>
         <hashTree/>
         <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
@@ -49,7 +49,36 @@
         </CookieManager>
         <hashTree/>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-          <collectionProp name="HeaderManager.headers"/>
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="window.wp_sn" elementType="Header">
+              <stringProp name="Header.name">window.wp_sn</stringProp>
+              <stringProp name="Header.value">&apos;o2_&apos; + &apos;poczta_o2_pl_logowanie&apos;</stringProp>
+            </elementProp>
+            <elementProp name="window.rekid" elementType="Header">
+              <stringProp name="Header.name">window.rekid</stringProp>
+              <stringProp name="Header.value">&apos;232169&apos;</stringProp>
+            </elementProp>
+            <elementProp name="window.wp_gemius_send" elementType="Header">
+              <stringProp name="Header.name">window.wp_gemius_send</stringProp>
+              <stringProp name="Header.value">false</stringProp>
+            </elementProp>
+            <elementProp name="window.wp_cookie_info" elementType="Header">
+              <stringProp name="Header.name">window.wp_cookie_info</stringProp>
+              <stringProp name="Header.value">false</stringProp>
+            </elementProp>
+            <elementProp name="window.wp_dot_type" elementType="Header">
+              <stringProp name="Header.name">window.wp_dot_type</stringProp>
+              <stringProp name="Header.value">&apos;&apos;</stringProp>
+            </elementProp>
+            <elementProp name="window.habahaba" elementType="Header">
+              <stringProp name="Header.name">window.habahaba</stringProp>
+              <stringProp name="Header.value">&apos;strongxemxsampxvarxixinsxbxcite&apos;</stringProp>
+            </elementProp>
+            <elementProp name="window.gafReady" elementType="Header">
+              <stringProp name="Header.name">window.gafReady</stringProp>
+              <stringProp name="Header.value">true</stringProp>
+            </elementProp>
+          </collectionProp>
         </HeaderManager>
         <hashTree/>
         <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
@@ -58,11 +87,11 @@
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Zmienne zdefiniowane przez użytkownika" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">podac strone</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.domain">poczta.o2.pl</stringProp>
+            <stringProp name="HTTPSampler.port">8080</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">stronba</stringProp>
+            <stringProp name="HTTPSampler.path">https://poczta.o2.pl/zaloguj</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -74,55 +103,52 @@
           </HTTPSamplerProxy>
           <hashTree>
             <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers"/>
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">window.wp_sn</stringProp>
+                  <stringProp name="Header.value">&apos;o2_&apos; + &apos;poczta_o2_pl_logowanie&apos;</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">window.rekid</stringProp>
+                  <stringProp name="Header.value">&apos;232169&apos;</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">window.wp_gemius_send</stringProp>
+                  <stringProp name="Header.value">false</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">window.wp_cookie_info</stringProp>
+                  <stringProp name="Header.value">false</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">window.wp_dot_type</stringProp>
+                  <stringProp name="Header.value">&apos;&apos;</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">window.habahaba</stringProp>
+                  <stringProp name="Header.value">&apos;strongxemxsampxvarxixinsxbxcite&apos;</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">window.gafReady</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+              </collectionProp>
               <stringProp name="TestPlan.comments">dodac wartosci z heada</stringProp>
             </HeaderManager>
             <hashTree/>
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">false</stringProp>
-              <stringProp name="RegexExtractor.refname"></stringProp>
-              <stringProp name="RegexExtractor.regex">&lt;input type................. value=&quot;(.+?)&quot; /&gt; szukamy potrzebnego wyrazenia w body</stringProp>
-              <stringProp name="RegexExtractor.template"></stringProp>
-              <stringProp name="RegexExtractor.default"></stringProp>
-              <stringProp name="RegexExtractor.match_number"></stringProp>
+              <stringProp name="RegexExtractor.refname">id = &quot;(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.regex">&lt;input class=&quot;form_input&quot; tabindex=&quot;1&quot; type=&quot;text&quot; id=&quot;(.+?)&quot; name=&quot;username&quot; placeholder=&quot;adres e-mail&quot; required&gt;</stringProp>
+              <stringProp name="RegexExtractor.template">login</stringProp>
+              <stringProp name="RegexExtractor.default">ERROR</stringProp>
+              <stringProp name="RegexExtractor.match_number">0</stringProp>
+              <stringProp name="TestPlan.comments">czy wystepuje wyrazenie,slowo,wartosc,grupa itp.</stringProp>
             </RegexExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Test logowania" enabled="true">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Zmienne zdefiniowane przez użytkownika" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="parametry potrzebne do logowania" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">wartosci w parametrach</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">parametry potrzebne do logowania</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">podac strone</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol"></stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">strona logowania</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers"/>
-              <stringProp name="TestPlan.comments">dodac wartosci z heada</stringProp>
-            </HeaderManager>
-            <hashTree/>
-          </hashTree>
           <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-            <stringProp name="IfController.condition"></stringProp>
+            <stringProp name="IfController.condition">$(id) != &quot;ERROR&quot;</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
           </IfController>
           <hashTree>
@@ -138,12 +164,12 @@
                   </elementProp>
                 </collectionProp>
               </elementProp>
-              <stringProp name="HTTPSampler.domain">podac strone</stringProp>
-              <stringProp name="HTTPSampler.port"></stringProp>
-              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.domain">poczta.o2.pl</stringProp>
+              <stringProp name="HTTPSampler.port">8080</stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
               <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">strona</stringProp>
-              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <stringProp name="HTTPSampler.path">https://poczta.o2.pl/zaloguj</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
               <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -154,8 +180,165 @@
             </HTTPSamplerProxy>
             <hashTree>
               <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-                <collectionProp name="HeaderManager.headers"/>
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="window.wp_sn" elementType="Header">
+                    <stringProp name="Header.name">window.wp_sn</stringProp>
+                    <stringProp name="Header.value">&apos;o2_&apos; + &apos;poczta_o2_pl_logowanie&apos;</stringProp>
+                  </elementProp>
+                  <elementProp name="window.rekid" elementType="Header">
+                    <stringProp name="Header.name">window.rekid</stringProp>
+                    <stringProp name="Header.value">&apos;232169&apos;</stringProp>
+                  </elementProp>
+                  <elementProp name="window.wp_gemius_send" elementType="Header">
+                    <stringProp name="Header.name">window.wp_gemius_send</stringProp>
+                    <stringProp name="Header.value">false</stringProp>
+                  </elementProp>
+                  <elementProp name="window.wp_cookie_info" elementType="Header">
+                    <stringProp name="Header.name">window.wp_cookie_info</stringProp>
+                    <stringProp name="Header.value">false</stringProp>
+                  </elementProp>
+                  <elementProp name="window.wp_dot_type" elementType="Header">
+                    <stringProp name="Header.name">window.wp_dot_type</stringProp>
+                    <stringProp name="Header.value">&apos;&apos;</stringProp>
+                  </elementProp>
+                  <elementProp name="window.habahaba" elementType="Header">
+                    <stringProp name="Header.name">window.habahaba</stringProp>
+                    <stringProp name="Header.value">&apos;strongxemxsampxvarxixinsxbxcite&apos;</stringProp>
+                  </elementProp>
+                  <elementProp name="window.gafReady" elementType="Header">
+                    <stringProp name="Header.name">window.gafReady</stringProp>
+                    <stringProp name="Header.value">true</stringProp>
+                  </elementProp>
+                </collectionProp>
                 <stringProp name="TestPlan.comments">dodac wartosci z heada</stringProp>
+              </HeaderManager>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request Login" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Zmienne zdefiniowane przez użytkownika" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="login" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${login}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">login</stringProp>
+                </elementProp>
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">${haslo}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">poczta.o2.pl</stringProp>
+            <stringProp name="HTTPSampler.port">8080</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">https://poczta.o2.pl/zaloguj</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="window.wp_sn" elementType="Header">
+                  <stringProp name="Header.name">window.wp_sn</stringProp>
+                  <stringProp name="Header.value">&apos;o2_&apos; + &apos;poczta_o2_pl_logowanie&apos;</stringProp>
+                </elementProp>
+                <elementProp name="window.rekid" elementType="Header">
+                  <stringProp name="Header.name">window.rekid</stringProp>
+                  <stringProp name="Header.value">&apos;232169&apos;</stringProp>
+                </elementProp>
+                <elementProp name="window.wp_gemius_send" elementType="Header">
+                  <stringProp name="Header.name">window.wp_gemius_send</stringProp>
+                  <stringProp name="Header.value">false</stringProp>
+                </elementProp>
+                <elementProp name="window.wp_cookie_info" elementType="Header">
+                  <stringProp name="Header.name">window.wp_cookie_info</stringProp>
+                  <stringProp name="Header.value">false</stringProp>
+                </elementProp>
+                <elementProp name="window.wp_dot_type" elementType="Header">
+                  <stringProp name="Header.name">window.wp_dot_type</stringProp>
+                  <stringProp name="Header.value">&apos;&apos;</stringProp>
+                </elementProp>
+                <elementProp name="window.habahaba" elementType="Header">
+                  <stringProp name="Header.name">window.habahaba</stringProp>
+                  <stringProp name="Header.value">&apos;strongxemxsampxvarxixinsxbxcite&apos;</stringProp>
+                </elementProp>
+                <elementProp name="window.gafReady" elementType="Header">
+                  <stringProp name="Header.name">window.gafReady</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">dodac wartosci z heada</stringProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+            <stringProp name="IfController.condition"></stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Zmienne zdefiniowane przez użytkownika" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path"></stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="window.wp_sn" elementType="Header">
+                    <stringProp name="Header.name">window.wp_sn</stringProp>
+                    <stringProp name="Header.value">&apos;o2_&apos; + &apos;poczta_o2_pl_logowanie&apos;</stringProp>
+                  </elementProp>
+                  <elementProp name="window.rekid" elementType="Header">
+                    <stringProp name="Header.name">window.rekid</stringProp>
+                    <stringProp name="Header.value">&apos;232169&apos;</stringProp>
+                  </elementProp>
+                  <elementProp name="window.wp_gemius_send" elementType="Header">
+                    <stringProp name="Header.name">window.wp_gemius_send</stringProp>
+                    <stringProp name="Header.value">false</stringProp>
+                  </elementProp>
+                  <elementProp name="window.wp_cookie_info" elementType="Header">
+                    <stringProp name="Header.name">window.wp_cookie_info</stringProp>
+                    <stringProp name="Header.value">false</stringProp>
+                  </elementProp>
+                  <elementProp name="window.wp_dot_type" elementType="Header">
+                    <stringProp name="Header.name">window.wp_dot_type</stringProp>
+                    <stringProp name="Header.value">&apos;&apos;</stringProp>
+                  </elementProp>
+                  <elementProp name="window.habahaba" elementType="Header">
+                    <stringProp name="Header.name">window.habahaba</stringProp>
+                    <stringProp name="Header.value">&apos;strongxemxsampxvarxixinsxbxcite&apos;</stringProp>
+                  </elementProp>
+                  <elementProp name="window.gafReady" elementType="Header">
+                    <stringProp name="Header.name">window.gafReady</stringProp>
+                    <stringProp name="Header.value">true</stringProp>
+                  </elementProp>
+                </collectionProp>
               </HeaderManager>
               <hashTree/>
             </hashTree>
@@ -164,11 +347,11 @@
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Zmienne zdefiniowane przez użytkownika" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
-            <stringProp name="HTTPSampler.domain">podac strone</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.domain">poczta.o2.pl</stringProp>
+            <stringProp name="HTTPSampler.port">8080</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
             <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">strona wylogowania</stringProp>
+            <stringProp name="HTTPSampler.path">https://poczta.o2.pl/wylogowano</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -180,7 +363,36 @@
           </HTTPSamplerProxy>
           <hashTree>
             <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers"/>
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="window.wp_sn" elementType="Header">
+                  <stringProp name="Header.name">window.wp_sn</stringProp>
+                  <stringProp name="Header.value">&apos;o2_&apos; + &apos;poczta_o2_pl_logowanie&apos;</stringProp>
+                </elementProp>
+                <elementProp name="window.rekid" elementType="Header">
+                  <stringProp name="Header.name">window.rekid</stringProp>
+                  <stringProp name="Header.value">&apos;232169&apos;</stringProp>
+                </elementProp>
+                <elementProp name="window.wp_gemius_send" elementType="Header">
+                  <stringProp name="Header.name">window.wp_gemius_send</stringProp>
+                  <stringProp name="Header.value">false</stringProp>
+                </elementProp>
+                <elementProp name="window.wp_cookie_info" elementType="Header">
+                  <stringProp name="Header.name">window.wp_cookie_info</stringProp>
+                  <stringProp name="Header.value">false</stringProp>
+                </elementProp>
+                <elementProp name="window.wp_dot_type" elementType="Header">
+                  <stringProp name="Header.name">window.wp_dot_type</stringProp>
+                  <stringProp name="Header.value">&apos;&apos;</stringProp>
+                </elementProp>
+                <elementProp name="window.habahaba" elementType="Header">
+                  <stringProp name="Header.name">window.habahaba</stringProp>
+                  <stringProp name="Header.value">&apos;strongxemxsampxvarxixinsxbxcite&apos;</stringProp>
+                </elementProp>
+                <elementProp name="window.gafReady" elementType="Header">
+                  <stringProp name="Header.name">window.gafReady</stringProp>
+                  <stringProp name="Header.value">true</stringProp>
+                </elementProp>
+              </collectionProp>
               <stringProp name="TestPlan.comments">dodac wartosci z heada</stringProp>
             </HeaderManager>
             <hashTree/>
