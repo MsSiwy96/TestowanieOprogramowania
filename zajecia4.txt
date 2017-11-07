@@ -1,0 +1,72 @@
+Thread Group:
+	JDBC connection configuration :
+		
+		(w tym oknie)
+		max number of connection : 10
+		max wall: 10000
+		time between eviction runs: 50000
+
+
+		soft min evibtable idle time : 5000
+		validation query: select 1 
+
+		Database URL: podac url bazy
+		JDBC driver class: 
+		usnername: login
+		password: haslo
+
+	JDBC Request update:
+
+		variable name: TEST
+		{ w tabelce wpisujemy ca³e update'y (jak z sql) }
+
+
+	JDBC Request insert:
+
+		variable name: TEST
+		{insert into
+		id, isgood, date itp. 
+		values
+		//"wrzucamy wszystkie wartosci"
+`		(5, false, '1996' itp.)
+		
+
+	JDBC Request insert:
+
+	JDBC Request delete:  // chyba niekonieczny
+
+		w tabelce {delete .....}
+
+	Summary Report:
+	View Result Tree:
+	Simple Data Writer: // zapisuje rezultaty do pliku
+
+
+// do zrobienia:
+// postawic lokalnie baze danych
+// zalozyc tabele
+// napisac plan ktory wstawi z 10000
+// sqle mo¿na œci¹gaæ z logów
+
+// transaction isolation levels - sprawdziæ
+
+--------------------------------------------------------
+TEMAT NR 2:
+
+Thread Group:
+	Random Variable:	
+
+	HTTP Request:
+
+		Server name: nazwa serwera
+
+		path: odpowiednia sciezka
+		protocol: http      method: POST
+		files upload: sciezka do pliku na ktorym ma byc dzialanie
+
+
+
+	Summary report:
+	View Result Tree:
+	Simple Data Writer: // zapisuje rezultaty do pliku
+				("Nagios" testuje ale tylko czyta logi (nie rusza selectów) )
