@@ -1,0 +1,67 @@
+-prosty algorytm
+- 0 linijek w main
+-udowodnic dzialanie za pomoca testow jednostkowych jUnit
+
+// pakiet a.b.c
+class A{
+
+	public void a()
+	{
+		int x
+		if(x >0) {}
+		else if(x ==0) {}
+		else {}
+	}
+
+	public bool b(int i)
+	{
+		if(i>0)
+		return true;
+		else;
+		return false;
+	}
+}
+
+
+class TestA   -- w tym samym pakiecie co testowane (czyli tutaj a.b.c)
+{
+	@Test  -- annotacja
+	public void testA() 
+	{
+		A a = new A(); // to nie trzeba tworzyc obiektu w kazdym tescie
+
+		assertTrue(a.b(1));
+	}
+	
+	@Test
+	public void testA1()
+	{
+		assertFalse(a.b(0));
+	}
+
+	@BeforeClass
+	public test Before() // je¿eli obiekt zrobiny jest tak
+	{
+		A a = new A();
+	}
+}
+
+(uzyj wszystkich w tescie)
+----Asercje: -----
+assertEquals(1,a.b(1));
+assertTrue(a);
+assertFalse(b);
+assertNull(a);
+
+-----Annotacje: --- 
+@BeforeClass; // 1 na samym poczatku
+@AfterClass; // 1 na samym koncu
+@Before; // przed kazdym testem
+@After; // po kazdym tescie
+
+// DOdawanie .jar do projektu
+File -> Properties -> Java Build Path -> Add External JARs
+
+//Robienie Test Coverage
+EclEmma
+https://marketplace.eclipse.org/content/eclemma-java-code-coverage
